@@ -1,25 +1,25 @@
 package tn.esprit.userservice.controllers;
 
 import lombok.AccessLevel;
+import lombok.AllArgsConstructor;
 import lombok.RequiredArgsConstructor;
 import lombok.experimental.FieldDefaults;
 import org.springframework.web.bind.annotation.*;
 import tn.esprit.userservice.models.User;
-import tn.esprit.userservice.services.IUserService;
+import tn.esprit.userservice.services.UserService;
 
 import java.util.List;
 
 @RestController
-@RequestMapping("user")
-@FieldDefaults(level = AccessLevel.PRIVATE)
-@RequiredArgsConstructor
+@AllArgsConstructor
 public class UserController {
-    final IUserService userService;
+    private UserService userService;
 
     @PutMapping
     public User add_or_update(@RequestBody User user){
        return userService.add_or_update(user);
     }
+
     @DeleteMapping("{id}")
     public boolean delete(@PathVariable("id") long id)
     {
