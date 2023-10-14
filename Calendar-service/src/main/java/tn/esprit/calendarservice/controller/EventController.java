@@ -13,32 +13,27 @@ import java.util.List;
 @AllArgsConstructor
 public class EventController {
     private EventService eventService;
-    @PostMapping("/add")
+    @PutMapping
   public Event addEvent(@RequestBody Event event)
   {
       return  eventService.add_event(event);
   }
-  @GetMapping("/all")
+  @GetMapping
    public List<Event> getAllEvents()
   {
       return eventService.getAllEvents();
   }
-  @GetMapping("get/id")
+  @GetMapping("{id}")
 
   public Event getbyId(@PathVariable long id)
   {
       return  eventService.getbyId(id);
   }
-  @DeleteMapping("delete/id")
+  @DeleteMapping("{id}")
 
   public void deleteEvent(@PathVariable long id)
   {
       eventService.deleteEvent(id);
-  }
-  @PutMapping("/update")
-    public Event updateEvent(@RequestBody Event event)
-  {
-    return  eventService.add_event(event);
   }
 
 }
