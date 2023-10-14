@@ -2,13 +2,15 @@ package tn.esprit.courseservice.controller;
 
 import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.*;
+import tn.esprit.courseservice.dto.CourseDescription;
+import tn.esprit.courseservice.dto.Event;
 import tn.esprit.courseservice.model.Course;
 import tn.esprit.courseservice.service.CourseService;
 
+import java.util.Calendar;
 import java.util.List;
 
 @RestController
-@RequestMapping("course")
 @AllArgsConstructor
 public class CourseController {
 
@@ -36,5 +38,15 @@ public class CourseController {
     public void deleteEvent(@PathVariable long id)
     {
         courseService.deleteCourse(id);
+    }
+
+    @GetMapping("byCal/{calendarId}")
+    public Course getCoursebyCalendar(@PathVariable("calendarId") long calendarId)
+    {
+        return courseService.getCoursebyCalendar(calendarId);
+    }
+    @GetMapping("desc/{courseId}")
+    public CourseDescription getDescription(@PathVariable("courseId") long courseId){
+        return courseService.getDescription(courseId);
     }
 }

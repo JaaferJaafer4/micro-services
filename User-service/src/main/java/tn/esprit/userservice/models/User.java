@@ -27,16 +27,9 @@ public class User implements Serializable {
     String password;
 
     LocalDate birthDate;
-
+  @Enumerated(EnumType.STRING)
     Role role;
 
-    public User(String username, String email, String password, LocalDate birthDate, Role role) {
-        this.username = username;
-        this.email = email;
-        this.password = password;
-        this.birthDate = birthDate;
-        this.role = role;
-    }
 
 }
 

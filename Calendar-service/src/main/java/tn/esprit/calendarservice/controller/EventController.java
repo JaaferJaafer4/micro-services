@@ -9,7 +9,6 @@ import javax.ws.rs.Path;
 import java.util.List;
 
 @RestController
-@RequestMapping("calendar")
 @AllArgsConstructor
 public class EventController {
     private EventService eventService;
