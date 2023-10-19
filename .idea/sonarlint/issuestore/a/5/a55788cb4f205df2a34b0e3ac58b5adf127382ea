@@ -1,0 +1,13 @@
+
+R
+java:S49734"<Strings and Boxed types should be compared using "equals()".(Õ‹çê
+j
+java:S1845S"TRename method "getById" to prevent any misunderstanding/clash with method "getbyId".(œ€ñâ
+c	java:S100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¥Ğ¡Ú
+h
+java:S3776/"RRefactor this method to reduce its Cognitive Complexity from 16 to the 15 allowed.(’¨Ûó
+V	java:S125K"<This block of commented-out lines of code should be removed.(ÒÌâ–øÿÿÿÿ
+V
+java:S1128"ARemove this unused import 'tn.esprit.calendarservice.dto.Course'.(‹»ŸU
+H
+java:S1128"-Remove this unused import 'java.util.Arrays'.(î–˜Éüÿÿÿÿ

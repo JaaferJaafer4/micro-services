@@ -41,12 +41,18 @@ public class CourseController {
     }
 
     @GetMapping("byCal/{calendarId}")
-    public Course getCoursebyCalendar(@PathVariable("calendarId") long calendarId)
+    public List<Course> getCoursebyCalendar(@PathVariable("calendarId") long calendarId)
     {
-        return courseService.getCoursebyCalendar(calendarId);
+        return courseService.getCoursesbyCalendar(calendarId);
     }
     @GetMapping("desc/{courseId}")
     public CourseDescription getDescription(@PathVariable("courseId") long courseId){
         return courseService.getDescription(courseId);
+    }
+
+    @PutMapping("addToCalendar/{courseId}/{calendarId}")
+    public boolean addCourseToCalendar(@PathVariable("courseId") long courseId,@PathVariable("calendarId") long calendarId)
+    {
+        return courseService.addCourseToCalendar(courseId,calendarId);
     }
 }

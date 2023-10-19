@@ -22,6 +22,5 @@ public class Course implements Serializable {
     String description;
     long duration;
     String file;
-    @Column(unique = true)
     long calendarId;
 }

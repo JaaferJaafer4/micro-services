@@ -1,0 +1,82 @@
+version: "3.9"
+services:
+
+  Calendar:
+    container_name: calendar
+    image: "calendarms"
+    build: Calendar-service
+    ports:
+      - "8092:8092"
+    environment:
+      - EUREKA_CLIENT_SERVICEURL_DEFAULTZONE=http://serviceregistry:8761/eureka/
+      - SPRING_DATASOURCE_URL=jdbc:mysql://db-mysql:3306/calendardb?createDatabaseIfNotExist=true&userSSL=false&max_allowed_packet=15728640
+      - SPRING_DATASOURCE_USERNAME=root
+      - SPRING_DATASOURCE_PASSWORD=Mypass00/
+    depends_on:
+      - Eureka
+      - db-mysql
+
+  Course:
+    container_name: course
+    build: Course-service
+    ports:
+      - "8091:8091"
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:mysql://db-mysql:3306/coursedb?createDatabaseIfNotExist=true&userSSL=false&max_allowed_packet=15728640
+      - SPRING_DATASOURCE_USERNAME=root
+      - SPRING_DATASOURCE_PASSWORD=Mypass00/
+      - EUREKA_CLIENT_SERVICEURL_DEFAULTZONE=http://serviceregistry:8761/eureka/
+    image: "coursems"
+    restart: unless-stopped
+    depends_on:
+      - Eureka
+      - db-mysql
+
+  User:
+    container_name: user
+    build: User-service
+    ports:
+      - "8090:8090"
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:mysql://db-mysql:3306/userdb?createDatabaseIfNotExist=true&userSSL=false&max_allowed_packet=15728640
+      - SPRING_DATASOURCE_USERNAME=root
+      - SPRING_DATASOURCE_PASSWORD=Mypass00/
+      - EUREKA_CLIENT_SERVICEURL_DEFAULTZONE=http://serviceregistry:8761/eureka/
+    image: "userms"
+    restart: unless-stopped
+    depends_on:
+      - Eureka
+      - db-mysql
+
+  Gateway:
+    container_name: gateway
+    build: Api-gateway
+    ports:
+      - "9020:9020"
+    environment:
+      - EUREKA_CLIENT_SERVICEURL_DEFAULTZONE=http://serviceregistry:8761/eureka/
+    image: "gatewayms"
+    restart: unless-stopped
+    depends_on:
+      - Eureka
+
+  Eureka:
+    container_name: eureka
+    build: Discovery-service
+    hostname: serviceregistry
+    ports:
+      - "8761:8761"
+    image: "eureka"
+
+    environment:
+      - eureka.client.serviceUrl.defaultZone=http://serviceregistry:8761/eureka/
+
+  db-mysql:
+    image: "mysql:5.6"
+    container_name: db-mysql
+    environment:
+      - MYSQL_ROOT_PASSWORD=Mypass00/
+    ports:
+      - "3307:3306"
+    restart: unless-stopped
+

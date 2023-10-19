@@ -8,5 +8,5 @@ import java.util.Optional;
 
 public interface CourseRepository extends CrudRepository<Course,Long> {
 
-    Optional<Course> findCourseByCalendarId(long id);
+    List<Course> findCourseByCalendarId(long id);
 }
