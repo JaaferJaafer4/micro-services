@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="User-service" />
+        <module name="Course-service" />
+        <module name="Api-gateway" />
+        <module name="Discovery-service" />
+        <module name="Calendar-service" />
+        <module name="Evaluation-service" />
+      </profile>
+    </annotationProcessing>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="Api-gateway" options="-parameters" />
+      <module name="Calendar-service" options="-parameters" />
+      <module name="Course-service" options="-parameters" />
+      <module name="Discovery-service" options="-parameters" />
+      <module name="Evaluation-service" options="-parameters" />
+      <module name="User-service" options="-parameters" />
+    </option>
+  </component>
+</project>

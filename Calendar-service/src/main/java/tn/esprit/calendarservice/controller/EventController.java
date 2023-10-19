@@ -2,6 +2,7 @@ package tn.esprit.calendarservice.controller;
 
 import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.*;
+import tn.esprit.calendarservice.dto.Course;
 import tn.esprit.calendarservice.model.Event;
 import tn.esprit.calendarservice.service.EventService;
 
@@ -29,10 +30,17 @@ public class EventController {
       return  eventService.getbyId(id);
   }
   @DeleteMapping("{id}")
-
   public void deleteEvent(@PathVariable long id)
   {
       eventService.deleteEvent(id);
   }
+
+
+    @GetMapping("byUser/{id}")
+    public List<Event> getByUser(@PathVariable("id") long userId)
+    {
+        return eventService.getByUser(userId);
+    }
+
 
 }

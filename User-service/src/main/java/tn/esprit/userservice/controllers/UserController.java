@@ -11,11 +11,11 @@ import tn.esprit.userservice.services.UserService;
 import java.util.List;
 
 @RestController
-@AllArgsConstructor
+@RequiredArgsConstructor
 public class UserController {
-    private UserService userService;
+    private final UserService userService;
 
-    @PutMapping
+    @PutMapping("add")
     public User add_or_update(@RequestBody User user){
        return userService.add_or_update(user);
     }
