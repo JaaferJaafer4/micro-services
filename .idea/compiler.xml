@@ -15,7 +15,6 @@
         <module name="Evaluation-service" />
       </profile>
     </annotationProcessing>
-
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
@@ -23,7 +22,7 @@
       <module name="Calendar-service" options="-parameters" />
       <module name="Course-service" options="-parameters" />
       <module name="Discovery-service" options="-parameters" />
-      <module name="Evaluation-service" options="" />
+      <module name="Evaluation-service" options="-parameters" />
       <module name="User-service" options="-parameters" />
     </option>
   </component>

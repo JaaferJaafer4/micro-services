@@ -10,7 +10,6 @@ import tn.esprit.evaluationservice.service.EvaluationService;
 import java.util.List;
 
 @RestController
-@RequestMapping("/evaluation")
 public class EvaluationController {
     @Autowired
      EvaluationService evaluationControl;
