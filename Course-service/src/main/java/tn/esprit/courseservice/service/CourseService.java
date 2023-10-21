@@ -43,9 +43,9 @@ public class CourseService {
     }
 
 
-    public Course getCoursebyCalendar(long calendarId)
+    public List<Course> getCoursesbyCalendar(long calendarId)
     {
-        return courseRepository.findCourseByCalendarId(calendarId).orElse(null);
+        return courseRepository.findCourseByCalendarId(calendarId);
     }
 
 
@@ -76,6 +76,18 @@ public class CourseService {
             return null;
     }
 
+    public boolean addCourseToCalendar(long courseId,long calendarId)
+    {
+        Course course = courseRepository.findById(courseId).orElse(null);
+        Event event = getEventById(calendarId);
+        if(event != null && course != null)
+        {
+            course.setCalendarId(event.getEventId());
+            courseRepository.save(course);
+            return true;
+        }
+        return false;
+    }
 
     private Event getEventById(long eventId)
     {

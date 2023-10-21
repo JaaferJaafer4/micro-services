@@ -1,0 +1,8 @@
+
+J
+java:S10669"/Merge this if statement with the enclosing one.(‡è• ÿÿÿÿÿ
+f	java:S117<"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ðÚ‹Ÿ
+h	java:S100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ÿ•ÑØûÿÿÿÿ
+<
+java:S1168"&Return an empty array instead of null.(¥¹ï
+W	java:S125„"<This block of commented-out lines of code should be removed.(ÒÌâ–øÿÿÿÿ

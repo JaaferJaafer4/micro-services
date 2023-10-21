@@ -15,9 +15,7 @@
         <module name="Evaluation-service" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="Gestion_Devaluation" target="17" />
-    </bytecodeTargetLevel>
+
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
@@ -26,7 +24,6 @@
       <module name="Course-service" options="-parameters" />
       <module name="Discovery-service" options="-parameters" />
       <module name="Evaluation-service" options="-parameters" />
-      <module name="Gestion_Devaluation" options="-parameters" />
       <module name="User-service" options="-parameters" />
     </option>
   </component>

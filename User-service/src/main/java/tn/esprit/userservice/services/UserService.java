@@ -14,10 +14,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Service
-@AllArgsConstructor
+@RequiredArgsConstructor
 @Slf4j
 public class UserService{
-    private UserRepository userRepository;
+    private final UserRepository userRepository;
     public User add_or_update(User user) {
         return userRepository.save(user);
     }
