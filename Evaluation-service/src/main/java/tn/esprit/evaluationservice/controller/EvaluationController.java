@@ -3,6 +3,7 @@ package tn.esprit.evaluationservice.controller;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 import tn.esprit.evaluationservice.entite.evaluation;
 import tn.esprit.evaluationservice.service.EvaluationService;
@@ -16,6 +17,7 @@ public class EvaluationController {
 
     //http://localhost:8095/evaluation/GetallEvaluation
     @GetMapping("/GetallEvaluation")
+   // @PreAuthorize("hasRole('admin')")
     List<evaluation> GetAllEvaluation() {
         return evaluationControl.GetAllEvaluation();
     }
