@@ -1,9 +1,6 @@
 package tn.esprit.evaluationservice.entite;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -17,6 +14,7 @@ import java.util.Date;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
+@ToString
 public class evaluation implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -25,6 +23,6 @@ public class evaluation implements Serializable {
     private String criteres;
     private Date  dateEvaluation ;
     private String resultat;
-
+    private long courseId;
 
 }

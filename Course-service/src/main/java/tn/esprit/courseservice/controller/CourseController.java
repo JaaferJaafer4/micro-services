@@ -16,7 +16,7 @@ public class CourseController {
 
     private CourseService courseService;
 
-    @PutMapping
+    @PutMapping("add")
     public Course addEvent(@RequestBody Course course)
     {
         return  courseService.add_course(course);

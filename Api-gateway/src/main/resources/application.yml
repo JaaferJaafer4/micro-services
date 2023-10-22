@@ -1,5 +1,0 @@
-keycloak:
-  auth-server-url: http://localhost:8080/auth
-  realm: ApiKeyCloak
-  resource: onlineLearning
-  public-client: true

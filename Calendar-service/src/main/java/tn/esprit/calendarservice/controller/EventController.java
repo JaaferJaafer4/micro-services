@@ -8,6 +8,7 @@ import tn.esprit.calendarservice.service.EventService;
 
 import javax.ws.rs.Path;
 import java.util.List;
+import java.util.Map;
 
 @RestController
 @AllArgsConstructor
@@ -37,7 +38,7 @@ public class EventController {
 
 
     @GetMapping("byUser/{id}")
-    public List<Event> getByUser(@PathVariable("id") long userId)
+    public Map<String,List<Event>> getByUser(@PathVariable("id") long userId)
     {
         return eventService.getByUser(userId);
     }

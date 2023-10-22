@@ -5,6 +5,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
+import tn.esprit.evaluationservice.dto.EvaluationDescription;
 import tn.esprit.evaluationservice.entite.evaluation;
 import tn.esprit.evaluationservice.service.EvaluationService;
 
@@ -16,27 +17,33 @@ public class EvaluationController {
      EvaluationService evaluationControl;
 
     //http://localhost:8095/evaluation/GetallEvaluation
-    @GetMapping("/GetallEvaluation")
+    @GetMapping
    // @PreAuthorize("hasRole('admin')")
     List<evaluation> GetAllEvaluation() {
         return evaluationControl.GetAllEvaluation();
     }
 
+    @GetMapping("{id}")
+        // @PreAuthorize("hasRole('admin')")
+    EvaluationDescription getById(@PathVariable("id") long id) {
+        return evaluationControl.getEvaluationById(id);
+    }
+
     //http://localhost:8095/evaluation/AddEvaluation
-    @PostMapping("/AddEvaluation")
+    @PostMapping("add")
     public ResponseEntity<evaluation> addEvaluation(@RequestBody evaluation e) {
         evaluation AddEvaluation = evaluationControl.AddEvaluation(e);
         return ResponseEntity.status(HttpStatus.CREATED).body(AddEvaluation);
     }
 
     //http://localhost:8095/evaluation/updateEvaluation/1
-    @PutMapping("/updateEvaluation/{idEvaluation}")
+    @PutMapping("/update")
     public void updateEvaluation(@RequestBody evaluation e , @PathVariable("idEvaluation") Long idEvaluation) {
         evaluationControl.updateEvaluation(idEvaluation, e);
     }
 
     //http://localhost:8095/evaluation/removeEvaluation/1
-    @DeleteMapping("/removeEvaluation/{idEvaluation}")
+    @DeleteMapping
     public void deleteEvaluation(@PathVariable("idEvaluation") Long idEvaluation) {
         evaluationControl.deleteEvaluation(idEvaluation);
     }
