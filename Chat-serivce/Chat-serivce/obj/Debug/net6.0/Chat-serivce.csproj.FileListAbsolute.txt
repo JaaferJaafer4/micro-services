@@ -65,7 +65,6 @@
 /home/jaafar/myDisk/Codes/Spring/micro-services/Chat-serivce/Chat-serivce/bin/Debug/net6.0/Steeltoe.Common.dll
 /home/jaafar/myDisk/Codes/Spring/micro-services/Chat-serivce/Chat-serivce/bin/Debug/net6.0/Steeltoe.Common.Http.dll
 /home/jaafar/myDisk/Codes/Spring/micro-services/Chat-serivce/Chat-serivce/bin/Debug/net6.0/Steeltoe.Discovery.ClientCore.dll
-/home/jaafar/myDisk/Codes/Spring/micro-services/Chat-serivce/Chat-serivce/bin/Debug/net6.0/Steeltoe.Discovery.EurekaBase.dll
 /home/jaafar/myDisk/Codes/Spring/micro-services/Chat-serivce/Chat-serivce/bin/Debug/net6.0/Swashbuckle.AspNetCore.Swagger.dll
 /home/jaafar/myDisk/Codes/Spring/micro-services/Chat-serivce/Chat-serivce/bin/Debug/net6.0/Swashbuckle.AspNetCore.SwaggerGen.dll
 /home/jaafar/myDisk/Codes/Spring/micro-services/Chat-serivce/Chat-serivce/bin/Debug/net6.0/Swashbuckle.AspNetCore.SwaggerUI.dll
@@ -88,3 +87,4 @@
 /home/jaafar/myDisk/Codes/Spring/micro-services/Chat-serivce/Chat-serivce/obj/Debug/net6.0/ref/Chat-serivce.dll
 /home/jaafar/myDisk/Codes/Spring/micro-services/Chat-serivce/Chat-serivce/obj/Debug/net6.0/Chat-serivce.pdb
 /home/jaafar/myDisk/Codes/Spring/micro-services/Chat-serivce/Chat-serivce/obj/Debug/net6.0/Chat-serivce.genruntimeconfig.cache
+/home/jaafar/myDisk/Codes/Spring/micro-services/Chat-serivce/Chat-serivce/bin/Debug/net6.0/Steeltoe.Discovery.EurekaBase.dll

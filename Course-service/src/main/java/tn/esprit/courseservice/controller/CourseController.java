@@ -12,6 +12,7 @@ import java.util.List;
 
 @RestController
 @AllArgsConstructor
+@CrossOrigin(origins ="*")
 public class CourseController {
 
     private CourseService courseService;

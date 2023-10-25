@@ -9,7 +9,8 @@
       "Chat-serivce/1.0.0": {
         "dependencies": {
           "MongoDB.Driver": "2.22.0",
-          "Steeltoe.Discovery.ClientCore": "2.1.1",
+          "Newtonsoft.Json": "13.0.3",
+          "Steeltoe.Discovery.ClientCore": "2.1.0",
           "Swashbuckle.AspNetCore": "6.5.0",
           "System.Net.Http": "4.3.4"
         },
@@ -220,11 +221,11 @@
           }
         }
       },
-      "Newtonsoft.Json/11.0.2": {
+      "Newtonsoft.Json/13.0.3": {
         "runtime": {
-          "lib/netstandard2.0/Newtonsoft.Json.dll": {
-            "assemblyVersion": "11.0.0.0",
-            "fileVersion": "11.0.2.21924"
+          "lib/net6.0/Newtonsoft.Json.dll": {
+            "assemblyVersion": "13.0.0.0",
+            "fileVersion": "13.0.3.27908"
           }
         }
       },
@@ -286,7 +287,7 @@
           }
         }
       },
-      "Steeltoe.Common/2.1.1": {
+      "Steeltoe.Common/2.1.0": {
         "dependencies": {
           "Microsoft.Extensions.Configuration.Binder": "2.1.0",
           "Microsoft.Extensions.Logging.Abstractions": "2.1.0",
@@ -294,48 +295,48 @@
         },
         "runtime": {
           "lib/netstandard2.0/Steeltoe.Common.dll": {
-            "assemblyVersion": "2.1.1.0",
-            "fileVersion": "2.1.1.0"
+            "assemblyVersion": "2.1.0.0",
+            "fileVersion": "2.1.0.0"
           }
         }
       },
-      "Steeltoe.Common.Http/2.1.1": {
+      "Steeltoe.Common.Http/2.1.0": {
         "dependencies": {
           "Microsoft.Extensions.Http": "2.1.0",
-          "Newtonsoft.Json": "11.0.2",
-          "Steeltoe.Common": "2.1.1",
+          "Newtonsoft.Json": "13.0.3",
+          "Steeltoe.Common": "2.1.0",
           "System.Net.Http": "4.3.4"
         },
         "runtime": {
           "lib/netstandard2.0/Steeltoe.Common.Http.dll": {
-            "assemblyVersion": "2.1.1.0",
-            "fileVersion": "2.1.1.0"
+            "assemblyVersion": "2.1.0.0",
+            "fileVersion": "2.1.0.0"
           }
         }
       },
-      "Steeltoe.Discovery.ClientCore/2.1.1": {
+      "Steeltoe.Discovery.ClientCore/2.1.0": {
         "dependencies": {
           "Microsoft.AspNetCore.Hosting.Abstractions": "2.0.0",
           "Microsoft.Extensions.Options.ConfigurationExtensions": "2.0.0",
-          "Steeltoe.Common": "2.1.1",
-          "Steeltoe.Discovery.EurekaBase": "2.1.1"
+          "Steeltoe.Common": "2.1.0",
+          "Steeltoe.Discovery.EurekaBase": "2.1.0"
         },
         "runtime": {
           "lib/netstandard2.0/Steeltoe.Discovery.ClientCore.dll": {
-            "assemblyVersion": "2.1.1.0",
-            "fileVersion": "2.1.1.0"
+            "assemblyVersion": "2.1.0.0",
+            "fileVersion": "2.1.0.0"
           }
         }
       },
-      "Steeltoe.Discovery.EurekaBase/2.1.1": {
+      "Steeltoe.Discovery.EurekaBase/2.1.0": {
         "dependencies": {
-          "Newtonsoft.Json": "11.0.2",
-          "Steeltoe.Common.Http": "2.1.1"
+          "Newtonsoft.Json": "13.0.3",
+          "Steeltoe.Common.Http": "2.1.0"
         },
         "runtime": {
           "lib/netstandard2.0/Steeltoe.Discovery.EurekaBase.dll": {
-            "assemblyVersion": "2.1.1.0",
-            "fileVersion": "2.1.1.0"
+            "assemblyVersion": "2.1.0.0",
+            "fileVersion": "2.1.0.0"
           }
         }
       },
@@ -940,12 +941,12 @@
       "path": "mongodb.libmongocrypt/1.8.0",
       "hashPath": "mongodb.libmongocrypt.1.8.0.nupkg.sha512"
     },
-    "Newtonsoft.Json/11.0.2": {
+    "Newtonsoft.Json/13.0.3": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-IvJe1pj7JHEsP8B8J8DwlMEx8UInrs/x+9oVY+oCD13jpLu4JbJU2WCIsMRn5C4yW9+DgkaO8uiVE5VHKjpmdQ==",
-      "path": "newtonsoft.json/11.0.2",
-      "hashPath": "newtonsoft.json.11.0.2.nupkg.sha512"
+      "sha512": "sha512-HrC5BXdl00IP9zeV+0Z848QWPAoCr9P3bDEZguI+gkLcBKAOxix/tLEAAHC+UvDNPv4a2d18lOReHMOagPa+zQ==",
+      "path": "newtonsoft.json/13.0.3",
+      "hashPath": "newtonsoft.json.13.0.3.nupkg.sha512"
     },
     "runtime.debian.8-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.2": {
       "type": "package",
@@ -1066,33 +1067,33 @@
       "path": "snappier/1.0.0",
       "hashPath": "snappier.1.0.0.nupkg.sha512"
     },
-    "Steeltoe.Common/2.1.1": {
+    "Steeltoe.Common/2.1.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-hMllH2KEDgsVkM66yBbMS74LJJuNMc7OdPfTzvVaPrzL9uk5yk+8lutTuQ3v2/N43HCz9Q2ofIXbiBAwyJaEzA==",
-      "path": "steeltoe.common/2.1.1",
-      "hashPath": "steeltoe.common.2.1.1.nupkg.sha512"
+      "sha512": "sha512-W7nHKJguGBBFHt41vEdcjp1vTx3aTi2v6MeBnRLcjm6OiCUj/mkvCzpQ7B6U9T0rPFT7/6xW4U32YkgVHs20Mg==",
+      "path": "steeltoe.common/2.1.0",
+      "hashPath": "steeltoe.common.2.1.0.nupkg.sha512"
     },
-    "Steeltoe.Common.Http/2.1.1": {
+    "Steeltoe.Common.Http/2.1.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-OstZoAowpj+OMwoda8+qB2A5HNq/1Oco4MUUMrSyRw3mO4OHZdjeQ0racBA7HxeTPple4PqHIEzKNCCwDXr69g==",
-      "path": "steeltoe.common.http/2.1.1",
-      "hashPath": "steeltoe.common.http.2.1.1.nupkg.sha512"
+      "sha512": "sha512-CX9/3oNXEoC5XYWy1OTKdVxSNzlhdA2CMaR3goCQ8JMbKKUDYhsxPbfrjLc8HzjWJnJXJ6COI+hu9QkQH8ncDw==",
+      "path": "steeltoe.common.http/2.1.0",
+      "hashPath": "steeltoe.common.http.2.1.0.nupkg.sha512"
     },
-    "Steeltoe.Discovery.ClientCore/2.1.1": {
+    "Steeltoe.Discovery.ClientCore/2.1.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-EurinJievi7Wyd6p9CYFP0fHJByPTe6zO0hEj98j+pbpa+L6rKRrhpWQlK4KYsxXJqKiEV5Nu8sxyw9ZSTHJUg==",
-      "path": "steeltoe.discovery.clientcore/2.1.1",
-      "hashPath": "steeltoe.discovery.clientcore.2.1.1.nupkg.sha512"
+      "sha512": "sha512-GYS4A59/40lzu5OnBhYz5PlmtIOQULnVnhuvJwDwhairtelG3EzKwCaERXSCwwnbTtm/vsk7nKgCy79iC0lYEQ==",
+      "path": "steeltoe.discovery.clientcore/2.1.0",
+      "hashPath": "steeltoe.discovery.clientcore.2.1.0.nupkg.sha512"
     },
-    "Steeltoe.Discovery.EurekaBase/2.1.1": {
+    "Steeltoe.Discovery.EurekaBase/2.1.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-3V1L91paCUdhmnriVrTxwR9UhgmJEvml1uv0IMSRaG6Amn36RqJ0bkrEnRGGeLV+1aPw6FbqDJJZ5gYbnOd3DA==",
-      "path": "steeltoe.discovery.eurekabase/2.1.1",
-      "hashPath": "steeltoe.discovery.eurekabase.2.1.1.nupkg.sha512"
+      "sha512": "sha512-RSkOPUoylxskTfLxQw6AUH6LHtmaR7R9N/IZH7fv4+2IDJrG57deBNwqVzFL2DPsMmUsVYqiYhp7aU/j3BbooQ==",
+      "path": "steeltoe.discovery.eurekabase/2.1.0",
+      "hashPath": "steeltoe.discovery.eurekabase.2.1.0.nupkg.sha512"
     },
     "Swashbuckle.AspNetCore/6.5.0": {
       "type": "package",
