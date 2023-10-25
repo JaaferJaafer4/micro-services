@@ -1,5 +1,5 @@
 <h1>
-    <span style="color:blue;">Project Micro Service Online Learning/span>
+    <span style="color:blue;">Project Micro Service Online Learning</span>
 </h1>
 
 <h2 >
