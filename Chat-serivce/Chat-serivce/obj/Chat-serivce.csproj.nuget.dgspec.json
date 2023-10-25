@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/home/jaafar/myDisk/Codes/Spring/MSA/Chat-serivce/Chat-serivce/Chat-serivce.csproj": {}
+    "/home/jaafar/myDisk/Codes/Spring/micro-services/Chat-serivce/Chat-serivce/Chat-serivce.csproj": {}
   },
   "projects": {
-    "/home/jaafar/myDisk/Codes/Spring/MSA/Chat-serivce/Chat-serivce/Chat-serivce.csproj": {
+    "/home/jaafar/myDisk/Codes/Spring/micro-services/Chat-serivce/Chat-serivce/Chat-serivce.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/jaafar/myDisk/Codes/Spring/MSA/Chat-serivce/Chat-serivce/Chat-serivce.csproj",
+        "projectUniqueName": "/home/jaafar/myDisk/Codes/Spring/micro-services/Chat-serivce/Chat-serivce/Chat-serivce.csproj",
         "projectName": "Chat-serivce",
-        "projectPath": "/home/jaafar/myDisk/Codes/Spring/MSA/Chat-serivce/Chat-serivce/Chat-serivce.csproj",
+        "projectPath": "/home/jaafar/myDisk/Codes/Spring/micro-services/Chat-serivce/Chat-serivce/Chat-serivce.csproj",
         "packagesPath": "/home/jaafar/.nuget/packages/",
-        "outputPath": "/home/jaafar/myDisk/Codes/Spring/MSA/Chat-serivce/Chat-serivce/obj/",
+        "outputPath": "/home/jaafar/myDisk/Codes/Spring/micro-services/Chat-serivce/Chat-serivce/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/jaafar/.nuget/NuGet/NuGet.Config"

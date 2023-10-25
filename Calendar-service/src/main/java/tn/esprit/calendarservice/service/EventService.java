@@ -9,9 +9,7 @@ import tn.esprit.calendarservice.dto.User;
 import tn.esprit.calendarservice.model.Event;
 import tn.esprit.calendarservice.repository.EventRepository;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+import java.util.*;
 
 @Slf4j
 @AllArgsConstructor
@@ -44,14 +42,19 @@ public class EventService {
     }
 
 
-    public List<Event> getByUser(long userId)
+    public Map<String,List<Event>> getByUser(long userId)
     {
+
         User user = getById(userId);
+
+        Map<String,List<Event>> eventMap = new HashMap<>();
         if(user != null)
         {
             if(user.getRole() == "SUPERVISOR")
             {
-                return eventRepository.findAllByOrganizer(userId);
+
+                eventMap.put(user.getUsername(), eventRepository.findAllByOrganizer(userId));
+                return eventMap;
             }
             else
             {
@@ -64,22 +67,14 @@ public class EventService {
                             events.add(event);
                     }
                 }
-                return events;
+                eventMap.put(user.getUsername(), events);
+                return eventMap;
             }
         }
-        return new ArrayList<>();
+        return new HashMap<>();
     }
 
 
-   /* public List<Course> getCoursesForEvent(long eventId)
-    {
-        Course[] courses = webClientBuilder.build().get()
-                .uri("http://course-service/byCal/"+eventId)
-                .retrieve()
-                .bodyToMono(Course[].class)
-                .block();
-        return new ArrayList<>(Arrays.asList(courses));
-    }*/
     private User getById(long userId)
     {
         return webClientBuilder.build().get()

@@ -46,7 +46,11 @@ public class UserService{
     }
 
 
-    public String authenticate(AuthenticationRequest authenticationRequest) {
-        return null;
+
+
+    public boolean authenticate(AuthenticationRequest authenticationRequest) {
+        if(userRepository.findByEmailAndPassword(authenticationRequest.getEmail(), authenticationRequest.getPassword()).orElse(null) != null)
+            return true;
+        return false;
     }
 }

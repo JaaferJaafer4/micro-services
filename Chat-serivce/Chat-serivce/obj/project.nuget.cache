@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "yptFRzY3BWHR0GZaYXFhP3tOzHYxBV5wzla0IAH0dFYa5Y0Cfylv2/d/ayNyWFM/UEFmHyq4hgJxk3hoQ07XSg==",
+  "dgSpecHash": "C9boSzfFRVMM2lBJ1QDHBIIZlwvtodLL+MHfY3TK01/YZCI3V2HCu1HuYNALfik4f3DjTAp5nTbeT5uSMvFIXQ==",
   "success": true,
-  "projectFilePath": "/home/jaafar/myDisk/Codes/Spring/MSA/Chat-serivce/Chat-serivce/Chat-serivce.csproj",
+  "projectFilePath": "/home/jaafar/myDisk/Codes/Spring/micro-services/Chat-serivce/Chat-serivce/Chat-serivce.csproj",
   "expectedPackageFiles": [
     "/home/jaafar/.nuget/packages/awssdk.core/3.7.100.14/awssdk.core.3.7.100.14.nupkg.sha512",
     "/home/jaafar/.nuget/packages/awssdk.securitytoken/3.7.100.14/awssdk.securitytoken.3.7.100.14.nupkg.sha512",

@@ -1,6 +1,7 @@
 package tn.esprit.evaluationservice.service;
 
 import org.springframework.stereotype.Component;
+import tn.esprit.evaluationservice.dto.EvaluationDescription;
 import tn.esprit.evaluationservice.entite.evaluation;
 
 import java.util.List;
@@ -12,7 +13,7 @@ public interface IEvaluation {
 
     evaluation AddEvaluation(evaluation e);
 
-    Optional<evaluation> getEvaluationById(Long idEvaluation);
+    EvaluationDescription getEvaluationById(Long idEvaluation);
 
     // Delete (Supprimer une évaluation par son ID)
     void deleteEvaluation(Long idEvaluation);

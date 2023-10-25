@@ -5,6 +5,7 @@ import lombok.AllArgsConstructor;
 import lombok.RequiredArgsConstructor;
 import lombok.experimental.FieldDefaults;
 import org.springframework.web.bind.annotation.*;
+import tn.esprit.userservice.dto.AuthenticationRequest;
 import tn.esprit.userservice.models.User;
 import tn.esprit.userservice.services.UserService;
 
@@ -37,4 +38,9 @@ public class UserController {
     {
         return userService.getById(id);
     }
-}
+
+    @GetMapping("authenticate")
+    public boolean authenticate(AuthenticationRequest authenticationRequest) {
+        return userService.authenticate(authenticationRequest);
+    }
+    }
