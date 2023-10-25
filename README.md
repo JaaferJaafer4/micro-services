@@ -1,5 +1,5 @@
 <h1>
-    <span style="color:blue;">Project Micro Service Employ Edge</span>
+    <span style="color:blue;">Project Micro Service Online Learning/span>
 </h1>
 
 <h2 >
@@ -36,28 +36,28 @@
       <td>This micro service is our discovery Server.</td>
     </tr>
     <tr>
-      <td>Task-Server</td>
-      <td>This micro service is designed to manage all the Task.</td>
+      <td>User-Service</td>
+      <td>This micro service is designed to manage all Users.</td>
     </tr>
     <tr>
-      <td>Project-Server</td>
-      <td>This micro service is designed to manage all the Project.</td>
+      <td>Chat-Service</td>
+      <td>This micro service is designed to manage the Chat system.</td>
     </tr>
     <tr>
-      <td>Leave-Server</td>
+      <td>Inscription-Service</td>
       <td>This micro service is designed to manage all the Leave.</td>
     </tr>
     <tr>
-      <td>Intership-Server</td>
-      <td>This micro service is designed to manage all the Intership.</td>
+      <td>Course-Service</td>
+      <td>This micro service is designed to manage Inscriptions.</td>
     </tr>
     <tr>
-      <td>Claim-Server</td>
-      <td>This micro service is designed to manage all the Claim.</td>
+      <td>Evaluation-Service</td>
+      <td>This micro service is designed to manage Tests controle.</td>
     </tr>
     <tr>
-      <td>Event-Server</td>
-      <td>This micro service is designed to manage all the events.</td>
+      <td>Calendar-Server</td>
+      <td>This micro service is designed to manage the Calendar.</td>
     </tr>
   </tbody>
 </table>
@@ -76,35 +76,35 @@
   <tbody>
     <tr>
       <td>Eureka-Server</td>
-      <td>8051</td>
-    </tr>
-    <tr>
-      <td>Api-Gateway</td>
       <td>8761</td>
     </tr>
     <tr>
-      <td>Task-MS</td>
+      <td>Api-Gateway</td>
+      <td>9020</td>
+    </tr>
+    <tr>
+      <td>Chat-Service</td>
       <td>8890</td>
     </tr>
     <tr>
-      <td>Project-MS</td>
-      <td>8898</td>
+      <td>Course-Service</td>
+      <td>8091</td>
     </tr>
     <tr>
-      <td>Leave-MS</td>
-      <td>8893</td>
+      <td>Calendar-Service</td>
+      <td>8092</td>
     </tr>
     <tr>
-      <td>Intership-MS</td>
-      <td>2020</td>
+      <td>Inscription-Service</td>
+      <td>8093</td>
     </tr>
     <tr>
-      <td>Claim-MS</td>
-      <td>8030</td>
+      <td>Evaluation-Service</td>
+      <td>8095</td>
     </tr>
     <tr>
-      <td>Event-MS</td>
-      <td>5179</td>
+      <td>Chat-Service</td>
+      <td>5263</td>
     </tr>
   </tbody>
 </table>
