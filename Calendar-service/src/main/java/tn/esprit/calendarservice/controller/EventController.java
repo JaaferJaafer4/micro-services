@@ -12,6 +12,7 @@ import java.util.Map;
 
 @RestController
 @AllArgsConstructor
+@CrossOrigin(origins ="*")
 public class EventController {
     private EventService eventService;
     @PutMapping

@@ -12,6 +12,7 @@ import tn.esprit.evaluationservice.service.EvaluationService;
 import java.util.List;
 
 @RestController
+@CrossOrigin(origins ="*")
 public class EvaluationController {
     @Autowired
      EvaluationService evaluationControl;

@@ -65,38 +65,24 @@ services:
     depends_on:
       - Eureka
 
-  Chat:
-    container_name: chat
-    image: "chatms"
-    build:
-      context: Chat-serivce
-      dockerfile: Dockerfile
-    ports:
-      - "8096:8096"
-    environment:
-      - EUREKA_CLIENT_SERVICEURL_DEFAULTZONE=http://serviceregistry:8761/eureka/
-      - SPRING_DATA_MONGODB_HOST=db-mongo
-      - SPRING_DATA_MONGODB_PORT=27017
-    restart: unless-stopped
-    depends_on:
-      - Eureka
-      - db-mongo
-
-  Gateway:
-    container_name: gateway
-    image: "gatewayms"
-    build:
-      context: Api-gateway
-      dockerfile: Dockerfile
-    ports:
-      - "9020:9020"
-    environment:
-      - EUREKA_CLIENT_SERVICEURL_DEFAULTZONE=http://serviceregistry:8761/eureka/
-      
-    restart: unless-stopped
-    depends_on:
-      - Eureka
-  
+#  Chat:
+#    container_name: chat
+#    image: "chatms"
+#    build:
+#      context: Chat-serivce
+#      dockerfile: Dockerfile
+#    ports:
+#      - "7174:7174"
+#      - "127.0.0.1:5263:5263"
+#
+#    environment:
+#      - EUREKA_CLIENT_SERVICEURL_DEFAULTZONE=http://serviceregistry:8761/eureka/
+#      - SPRING_DATA_MONGODB_HOST=db-mongo
+#      - SPRING_DATA_MONGODB_PORT=27017
+#      - ASPNETCORE_ENVIRONMENT=Production
+#    depends_on:
+#      - Eureka
+#      - db-mongo
 
   Eureka:
     container_name: eureka
@@ -125,3 +111,28 @@ services:
     ports:
       - "27016:27017"
     restart: unless-stopped
+
+  Gateway:
+    container_name: gateway
+    image: "gatewayms"
+    build:
+      context: Api-gateway
+      dockerfile: Dockerfile
+    ports:
+      - "9020:9020"
+    environment:
+      - EUREKA_CLIENT_SERVICEURL_DEFAULTZONE=http://serviceregistry:8761/eureka/
+    restart: unless-stopped
+    depends_on:
+      - Eureka
+      - keycloak
+
+
+  keycloak:
+    image: jboss/keycloak
+    environment:
+      KEYCLOAK_USER: admin
+      KEYCLOAK_PASSWORD: admin
+    ports:
+      - "8080:8080"
+
