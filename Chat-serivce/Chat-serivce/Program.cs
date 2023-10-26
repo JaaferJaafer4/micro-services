@@ -8,7 +8,8 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Configuration.AddJsonFile("appsettings.json");
 var configuration = builder.Configuration;
 
-builder.Services.AddDiscoveryClient(configuration);
+builder.Services.AddDiscoveryClient(builder.Configuration);
+//builder.Configuration.AddConfiguration(configuration);
 
 
 builder.Services.AddControllers();

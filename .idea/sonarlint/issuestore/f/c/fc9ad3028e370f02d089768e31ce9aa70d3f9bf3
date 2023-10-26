@@ -1,4 +1,5 @@
 
 o	java:S100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(í—í¸ûÿÿÿÿ8Ÿ·Å¡µ1
+L	java:S1064"+Replace this use of System.out by a logger.(ë™¼ôûÿÿÿÿ8»Ÿ’Ê¶1
 c
-java:S11264"AReplace this if-then-else statement by a single return statement.(éĞÉ±úÿÿÿÿ8öÇ¡µ1
+java:S11265"AReplace this if-then-else statement by a single return statement.(Ûğ œûÿÿÿÿ8öÇ¡µ1

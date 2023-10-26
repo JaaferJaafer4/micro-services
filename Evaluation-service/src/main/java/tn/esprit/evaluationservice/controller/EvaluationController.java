@@ -19,6 +19,7 @@ public class EvaluationController {
 
     //http://localhost:8095/evaluation/GetallEvaluation
     @GetMapping
+    @CrossOrigin
    // @PreAuthorize("hasRole('admin')")
     List<evaluation> GetAllEvaluation() {
         return evaluationControl.GetAllEvaluation();
@@ -32,9 +33,9 @@ public class EvaluationController {
 
     //http://localhost:8095/evaluation/AddEvaluation
     @PostMapping("add")
-    public ResponseEntity<evaluation> addEvaluation(@RequestBody evaluation e) {
-        evaluation AddEvaluation = evaluationControl.AddEvaluation(e);
-        return ResponseEntity.status(HttpStatus.CREATED).body(AddEvaluation);
+    @CrossOrigin
+    public evaluation addEvaluation(@RequestBody evaluation e) {
+        return evaluationControl.AddEvaluation(e);
     }
 
     //http://localhost:8095/evaluation/updateEvaluation/1
@@ -44,7 +45,7 @@ public class EvaluationController {
     }
 
     //http://localhost:8095/evaluation/removeEvaluation/1
-    @DeleteMapping
+    @DeleteMapping("{idEvaluation}")
     public void deleteEvaluation(@PathVariable("idEvaluation") Long idEvaluation) {
         evaluationControl.deleteEvaluation(idEvaluation);
     }

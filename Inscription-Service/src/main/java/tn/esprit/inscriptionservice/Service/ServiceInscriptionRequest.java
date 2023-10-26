@@ -1,5 +1,7 @@
 package tn.esprit.inscriptionservice.Service;
 
+import lombok.AllArgsConstructor;
+import org.springframework.stereotype.Service;
 import tn.esprit.inscriptionservice.Entity.InscriptionRequest;
 import tn.esprit.inscriptionservice.Interface.IServiceInscriptionRequest;
 import tn.esprit.inscriptionservice.Repository.RepoInscriptionRequest;
@@ -7,6 +9,8 @@ import tn.esprit.inscriptionservice.Repository.RepoInscriptionRequest;
 import java.util.ArrayList;
 import java.util.List;
 
+@Service
+@AllArgsConstructor
 public class ServiceInscriptionRequest implements IServiceInscriptionRequest {
     RepoInscriptionRequest riq;
     @Override

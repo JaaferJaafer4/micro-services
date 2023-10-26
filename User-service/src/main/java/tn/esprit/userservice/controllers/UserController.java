@@ -13,7 +13,7 @@ import java.util.List;
 
 @RestController
 @RequiredArgsConstructor
-@CrossOrigin(origins = "http://localhost:4200")
+@CrossOrigin(origins = "*")
 public class UserController {
     private final UserService userService;
 
@@ -29,6 +29,7 @@ public class UserController {
     }
 
     @GetMapping
+    @CrossOrigin
     public List<User> getAll()
     {
         return userService.getAll();
@@ -40,8 +41,8 @@ public class UserController {
         return userService.getById(id);
     }
 
-    @GetMapping("authenticate")
-    public boolean authenticate(AuthenticationRequest authenticationRequest) {
+    @PostMapping("authenticate")
+    public boolean authenticate(@RequestBody AuthenticationRequest authenticationRequest) {
         return userService.authenticate(authenticationRequest);
     }
     }

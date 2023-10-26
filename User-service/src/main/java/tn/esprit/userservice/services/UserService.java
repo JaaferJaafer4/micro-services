@@ -49,7 +49,8 @@ public class UserService{
 
 
     public boolean authenticate(AuthenticationRequest authenticationRequest) {
-        if(userRepository.findByEmailAndPassword(authenticationRequest.getEmail(), authenticationRequest.getPassword()).orElse(null) != null)
+        System.out.println(authenticationRequest);
+        if(userRepository.findByEmailContainsAndPasswordContainingIgnoreCase(authenticationRequest.getEmail(), authenticationRequest.getPassword()).orElse(null) != null)
             return true;
         return false;
     }

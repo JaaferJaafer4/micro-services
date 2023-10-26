@@ -18,12 +18,14 @@ public class CourseController {
     private CourseService courseService;
 
     @PutMapping("add")
+    @CrossOrigin
     public Course addEvent(@RequestBody Course course)
     {
         return  courseService.add_course(course);
     }
 
     @GetMapping
+    @CrossOrigin
     public List<Course> getAllEvents()
     {
         return courseService.getAllCourses();

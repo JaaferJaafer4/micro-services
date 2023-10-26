@@ -15,12 +15,14 @@ import java.util.Map;
 @CrossOrigin(origins ="*")
 public class EventController {
     private EventService eventService;
-    @PutMapping
+    @PutMapping("add")
+    @CrossOrigin
   public Event addEvent(@RequestBody Event event)
   {
       return  eventService.add_event(event);
   }
   @GetMapping
+  @CrossOrigin
    public List<Event> getAllEvents()
   {
       return eventService.getAllEvents();
